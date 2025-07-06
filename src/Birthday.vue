@@ -1,13 +1,13 @@
 <template>
-    <h1>🎉 Birthday Reminder 🎉</h1>
+    <h1>Birthday Reminder</h1>
     <form @submit.prevent="addBirthday">
         <input v-model="name" placeholder="Name" required />
         <input v-model="date" type="date" required />
         <button type="submit">Add Birthday</button>
     </form>
-    <ul>
+        <ul>
         <li v-for="(b, index) in birthdays" :key="index">
-        {{ b.name }} - {{ b.date }}
+            {{ b.name }} - {{ b.date }}
         <button @click="removeBirthday(index)">Delete</button>
         </li>
     </ul>
